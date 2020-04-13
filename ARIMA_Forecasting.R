@@ -43,6 +43,7 @@ ts.plot(diff(sales))
 
 # Selección automatica del modelo ARIMA
 modelo <- auto.arima(sales, seasonal=T, stepwise=T, approximation=T)
+summary(modelo)
 checkresiduals(modelo) # Los residuales no estan correlacionados
 
 
